@@ -1,0 +1,38 @@
+info:
+  groupId: @project.groupId@
+  artifactId: @project.artifactId@
+  version: @project.version@
+
+server:
+  port: 9321
+
+spring:
+  profiles:
+    active: @profile.active@
+  application:
+    name: atinbo-monitor
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.6.106:8848
+#      config:
+#        server-addr: 192.168.6.106:8848
+#        file-extension: yml
+
+
+#开启端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+#日志配置
+logging:
+  path: ./logs
+  level:
+    root: INFO
+    com.atinbo: INFO
