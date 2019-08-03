@@ -1,4 +1,4 @@
-package com.atinbo.monitor;
+package com.atinbo.server;
 
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
@@ -15,9 +15,9 @@ import java.io.IOException;
 @EnableAdminServer
 @EnableDiscoveryClient
 @SpringBootApplication
-public class MonitorApplication {
+public class AdminApplication {
     public static void main(String[] args) {
-        SpringApplication.run(MonitorApplication.class, args);
+        SpringApplication.run(AdminApplication.class, args);
         try {
             System.in.read();
         } catch (IOException e) {

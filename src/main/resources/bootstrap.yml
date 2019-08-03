@@ -10,7 +10,7 @@ spring:
   profiles:
     active: @profile.active@
   application:
-    name: atinbo-monitor
+    name: @project.name@
   cloud:
     nacos:
       discovery:
